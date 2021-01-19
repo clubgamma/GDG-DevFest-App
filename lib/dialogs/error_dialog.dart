@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_devfest/utils/devfest.dart';
+import 'package:flutter_devfest/utils/clubgamma.dart';
 
 class ErrorDialog extends StatelessWidget {
   final Widget child;
@@ -7,7 +7,7 @@ class ErrorDialog extends StatelessWidget {
   final Function onTap;
 
   ErrorDialog(
-      {Key key, this.child, this.error = Devfest.some_error_text, this.onTap})
+      {Key key, this.child, this.error = ClubGamma.some_error_text, this.onTap})
       : super(key: key);
 
   @override
@@ -31,7 +31,7 @@ class ErrorDialog extends StatelessWidget {
                 ),
                 FlatButton(
                   colorBrightness: Brightness.dark,
-                  child: Text(Devfest.try_again_text),
+                  child: Text(ClubGamma.try_again_text),
                   color: Colors.red,
                   onPressed: () {
                     Navigator.pop(context);

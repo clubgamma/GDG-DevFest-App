@@ -10,7 +10,6 @@ class ConfigBloc extends Bloc<ConfigEvent, ConfigState> {
   ConfigBloc._internal();
 
   bool darkModeOn = false;
-
   ConfigState get initialState => new UnConfigState();
 
   @override

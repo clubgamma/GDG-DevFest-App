@@ -1,63 +1,113 @@
-import 'package:flutter_devfest/home/session.dart';
-import 'package:flutter_devfest/home/speaker.dart';
-import 'package:flutter_devfest/home/team.dart';
+import 'dart:convert';
+import 'package:flutter_devfest/model/agendaModel.dart';
+import 'package:flutter_devfest/model/faqModel.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter_devfest/network/i_client.dart';
 import 'package:flutter_devfest/utils/dependency_injection.dart';
-import 'package:flutter_devfest/utils/devfest.dart';
+import 'package:flutter_devfest/utils/clubgamma.dart';
+import 'package:yaml/yaml.dart';
 
 abstract class IHomeProvider {
-  Future<SpeakersData> getSpeakers();
-  Future<SessionsData> getSessions();
-  Future<TeamsData> getTeams();
+  getEvent();
+  loadfromAPI();
+  getGallery();
+  getTeam();
+  getFaq();
 }
 
 class HomeProvider implements IHomeProvider {
   IClient _client;
 
-  static final String kConstGetSpeakersUrl =
-      "${Devfest.baseUrl}/speaker-kol.json";
+  static final String kConstGetEventsUrl =
+      "${ClubGamma.baseUrl}/event_details.yml";
 
   //! Not Working
   static final String kConstGetSessionsUrl =
-      "${Devfest.baseUrl}/session-kol.json";
+      "${ClubGamma.baseUrl}/agenda_details.yml";
 
   //! Not Working
-  static final String kConstGetTeamsUrl = "${Devfest.baseUrl}/team-kol.json";
-
   HomeProvider() {
     _client = Injector().currentClient;
   }
 
   @override
-  Future<SpeakersData> getSpeakers() async {
-    var result = await _client.getAsync(kConstGetSpeakersUrl);
-    if (result.networkServiceResponse.success) {
-      SpeakersData res = SpeakersData.fromJson(result.mappedResult);
-      return res;
+  getEvent() async {
+    var res = await http.get(
+        'https://raw.githubusercontent.com/clubgamma/clubgamma-app-backend/master/eventsData/events_details.yml'
+        );
+    var result = await _client.getAsync(kConstGetEventsUrl);
+    if (res.statusCode == 200) {
+      var jsontolist = json.decode(json.encode(loadYaml(res.body)));
+      return jsontolist;
+    } else {
+      throw Exception(result.networkServiceResponse.message);
     }
-
-    throw Exception(result.networkServiceResponse.message);
   }
 
   @override
-  Future<SessionsData> getSessions() async {
+  loadfromAPI() async {
+    var res = await http.get(
+        'https://raw.githubusercontent.com/clubgamma/clubgamma-app-backend/master/eventsData/agenda_details.yml'
+        );
     var result = await _client.getAsync(kConstGetSessionsUrl);
-    if (result.networkServiceResponse.success) {
-      SessionsData res = SessionsData.fromJson(result.mappedResult);
-      return res;
+    var list = List<Agenda>();
+    if (res.statusCode == 200) {
+      var eventJson = json.decode(json.encode(loadYaml(res.body)));
+      //print('data');
+      //print(eventJson);
+      for (var eventJson in eventJson) {
+        list.add(Agenda.fromJson(eventJson));
+      }
+      return list;
+    } else {
+      throw Exception(result.networkServiceResponse.message);
     }
+    //EventModel ress = EventModel.loadfromAPI(list);
+  }
 
-    throw Exception(result.networkServiceResponse.message);
+  getGallery() async {
+    var res = await http.get(
+        'https://raw.githubusercontent.com/clubgamma/clubgamma-app-backend/master/General%20data/gallery_details.yml');
+    var result = await _client.getAsync(kConstGetEventsUrl);
+    if (res.statusCode == 200) {
+      var jsontolistt = json.decode(json.encode(loadYaml(res.body)));
+      return jsontolistt;
+    } else {
+      throw Exception(result.networkServiceResponse.message);
+    }
   }
 
   @override
-  Future<TeamsData> getTeams() async {
-    var result = await _client.getAsync(kConstGetTeamsUrl);
-    if (result.networkServiceResponse.success) {
-      TeamsData res = TeamsData.fromJson(result.mappedResult);
-      return res;
+  getTeam() async {
+    var res = await http.get(
+        'https://raw.githubusercontent.com/clubgamma/clubgamma-app-backend/master/General%20data/team_details.yml');
+    var result = await _client.getAsync(kConstGetEventsUrl);
+    if (res.statusCode == 200) {
+      var jsontolist = json.decode(json.encode(loadYaml(res.body)));
+      return jsontolist;
+    } else {
+      throw Exception(result.networkServiceResponse.message);
     }
+  }
 
-    throw Exception(result.networkServiceResponse.message);
+
+  @override
+  getFaq() async {
+    var res = await http.get(
+        'https://raw.githubusercontent.com/clubgamma/clubgamma-app-backend/master/General%20data/faq_details.yml');
+    var result = await _client.getAsync(kConstGetSessionsUrl);
+    var list = List<EventFaq>();
+    if (res.statusCode == 200) {
+      var eventJson = json.decode(json.encode(loadYaml(res.body)));
+      //print('data');
+      print(eventJson);
+      for (var eventJson in eventJson) {
+        list.add(EventFaq.fromJson(eventJson));
+      }
+      return list;
+      // print(list);
+    } else {
+      throw Exception(result.networkServiceResponse.message);
+    }
   }
 }

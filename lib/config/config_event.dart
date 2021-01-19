@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter_devfest/config/index.dart';
-import 'package:flutter_devfest/utils/devfest.dart';
+import 'package:flutter_devfest/utils/clubgamma.dart';
 import 'package:meta/meta.dart';
 
 @immutable
@@ -19,7 +19,7 @@ class DarkModeEvent extends ConfigEvent {
       {ConfigState currentState, ConfigBloc bloc}) async {
     try {
       bloc.darkModeOn = darkOn;
-      Devfest.prefs.setBool(Devfest.darkModePref, darkOn);
+      ClubGamma.prefs.setBool(ClubGamma.darkModePref, darkOn);
       return InConfigState();
     } catch (_, stackTrace) {
       print('$_ $stackTrace');
@@ -27,6 +27,7 @@ class DarkModeEvent extends ConfigEvent {
     }
   }
 }
+
 
 class LoadConfigEvent extends ConfigEvent {
   @override

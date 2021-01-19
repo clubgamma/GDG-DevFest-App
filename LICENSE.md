@@ -2,7 +2,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2019 Pawan Kumar
+Copyright (c) 2019 Pawan
 
 Copyright (c) 2020 Club Gamma
 

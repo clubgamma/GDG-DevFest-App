@@ -1,7 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter_devfest/home/session.dart';
-import 'package:flutter_devfest/home/speaker.dart';
-import 'package:flutter_devfest/home/team.dart';
 import 'package:meta/meta.dart';
 
 @immutable
@@ -25,37 +22,46 @@ class UnHomeState extends HomeState {
 
 /// Initialized
 class InHomeState extends HomeState {
-  final SpeakersData speakersData;
-  final SessionsData sessionsData;
-  final TeamsData teamsData;
+  final dynamic agendaData;
+  final dynamic eventData;
+  final dynamic galleryData;
+  final dynamic teamsData;
+  final dynamic faqData;
 
   InHomeState(
-      {@required this.speakersData,
-      @required this.sessionsData,
-      @required this.teamsData})
-      : super([speakersData, sessionsData, teamsData]);
+      {@required this.eventData,
+      @required this.agendaData,
+      @required this.galleryData,
+      @required this.teamsData,
+      @required this.faqData
+      })
+      : super([eventData, agendaData, galleryData, teamsData, faqData]);
   @override
   String toString() => 'InHomeState';
 
   @override
   HomeState getStateCopy() {
     return InHomeState(
-        speakersData: this.speakersData,
-        sessionsData: this.sessionsData,
-        teamsData: this.teamsData);
+        agendaData: this.agendaData,
+        eventData: this.eventData,
+        galleryData: this.galleryData,
+        teamsData: this.teamsData,
+        faqData: this.faqData,
+        );
   }
 }
 
 class ErrorHomeState extends HomeState {
-  final String errorMessage;
+  String errorMessage =
+      'There is a Problem! Can you please check your Internet connection?!';
 
-  ErrorHomeState(this.errorMessage);
+  ErrorHomeState();
 
-  @override
-  String toString() => 'ErrorHomeState';
+  // @override
+  // String toString() => 'ErrorHomeState';
 
   @override
   HomeState getStateCopy() {
-    return ErrorHomeState(this.errorMessage);
+    return ErrorHomeState();
   }
 }
