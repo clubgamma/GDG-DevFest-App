@@ -38,7 +38,7 @@ ClubGamma Mobile application is destination of all club related updates in your 
 
 ### Missing Key.Properties file
 
-If you try to build the project straight away, you'll get an error complaining that a `key.properties` file is missing and Exit code 1 from: /GDG-DevFest-App-master/android/gradlew app:properties:. To resolve that,
+If you try to build the project straight away, you'll get an error complaining that a `key.properties` file is missing and Exit code 1 from: /Club-Gamma-App-master/android/gradlew app:properties:. To resolve that,
 
 1.  Open [Club-Gamma-App-master\android\app\build.gradle](https://github.com/clubgamma/Club-Gamma-App/blob/master/android/app/build.gradle) file and comment following lines-
 
@@ -88,4 +88,3 @@ Awesome! Contributions of all kinds are greatly appreciated. To help smoothen th
 Project is published under the [MIT license](/LICENSE.md).
 This application is made using [Pawan kumar's](https://github.com/iampawan) GDG DevFest repo.
 
-_GDG DevFest App is not endorsed and/or supported by Google, the corporation._
