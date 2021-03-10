@@ -1,13 +1,13 @@
 # CLUB GAMMA APP 
 
-<p align="center">
+<p>
 <img width="800px"  src="https://user-images.githubusercontent.com/57007680/109310623-c9a78e80-786a-11eb-8496-7985f0c6d17d.png">
 </p>
-<p align="center">
+<p>
 <a target="_blank" href='http://bit.ly/2NGMzIc'><img alt='Get it on Google Play' src='https://goldtonemusicgroup.com/img/goldtone/main-page/news/playstore-badge.png' height='48px'/></a>
 
 </p>
-<p align="center"><a href="#getting-started">:rocket: Get Started</a></p>
+<p><a href="#getting-started">:rocket: Get Started</a></p>
 
 ## 📸 ScreenShots
 
