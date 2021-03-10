@@ -13,9 +13,9 @@
 
 |           Dark Theme                 |             Light Theme              |                                      
 | :----------------------------------: | :----------------------------------: |
-| <img src="https://i.imgur.com/FOVf5hN.jpg" width="200" height="200"> | ![](https://i.imgur.com/FOVf5hN.jpg) |
-| ![](https://i.imgur.com/WWTjQ65.jpg) | ![](https://i.imgur.com/dFaTNJE.jpg) |
-| ![](https://i.imgur.com/ahjGYix.jpg) | ![](https://i.imgur.com/0VhpHzo.jpg) |
+| <img src="https://i.imgur.com/A5nRqy6.jpg" width="350" height="685"> |<img src="https://i.imgur.com/FOVf5hN.jpg" width="350" height="685">  |
+| <img src="https://i.imgur.com/WWTjQ65.jpg" width="350" height="685"> | <img src="https://i.imgur.com/dFaTNJE.jpg" width="350" height="685"> |
+| <img src="https://i.imgur.com/ahjGYix.jpg" width="350" height="685"> | <img src="https://i.imgur.com/0VhpHzo.jpg" width="350" height="685"> |
 
 ### Show some :heart: and star the repo to support the project
 
