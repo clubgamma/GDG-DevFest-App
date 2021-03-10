@@ -11,11 +11,11 @@
 
 ## 📸 ScreenShots
 
-|             Light Theme              |              Dark Theme              |
+|           Dark Theme                 |             Light Theme              |                                      
 | :----------------------------------: | :----------------------------------: |
-| ![](https://i.imgur.com/ipUdGyk.png) | ![](https://i.imgur.com/u1rCsZ8.png) |
-| ![](https://i.imgur.com/rujH2xz.png) | ![](https://i.imgur.com/gOx5T8H.png) |
-| ![](https://i.imgur.com/RubqN3Z.png) | ![](https://i.imgur.com/D2Ucb2t.png) |
+| ![](https://i.imgur.com/A5nRqy6.jpg) | ![](https://i.imgur.com/FOVf5hN.jpg) |
+| ![](https://i.imgur.com/WWTjQ65.jpg) | ![](https://i.imgur.com/dFaTNJE.jpg) |
+| ![](https://i.imgur.com/ahjGYix.jpg) | ![](https://i.imgur.com/0VhpHzo.jpg) |
 
 ### Show some :heart: and star the repo to support the project
 
