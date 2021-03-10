@@ -11,8 +11,8 @@
 
 ## 📸 ScreenShots
 
-|           Dark Theme                 |             Light Theme              |                                      
-| :----------------------------------: | :----------------------------------: |
+|                                Dark Theme                            |                                Light Theme                           |                                   
+| :------------------------------------------------------------------: | :-------------------------------------------------------------------:|
 | <img src="https://i.imgur.com/A5nRqy6.jpg" width="350" height="685"> |<img src="https://i.imgur.com/FOVf5hN.jpg" width="350" height="685">  |
 | <img src="https://i.imgur.com/WWTjQ65.jpg" width="350" height="685"> | <img src="https://i.imgur.com/dFaTNJE.jpg" width="350" height="685"> |
 | <img src="https://i.imgur.com/ahjGYix.jpg" width="350" height="685"> | <img src="https://i.imgur.com/0VhpHzo.jpg" width="350" height="685"> |
