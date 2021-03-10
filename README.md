@@ -13,7 +13,7 @@
 
 |           Dark Theme                 |             Light Theme              |                                      
 | :----------------------------------: | :----------------------------------: |
-| ![](https://i.imgur.com/A5nRqy6.jpg) | ![](https://i.imgur.com/FOVf5hN.jpg) |
+| <img src="https://i.imgur.com/FOVf5hN.jpg" width="200" height="200"> | ![](https://i.imgur.com/FOVf5hN.jpg) |
 | ![](https://i.imgur.com/WWTjQ65.jpg) | ![](https://i.imgur.com/dFaTNJE.jpg) |
 | ![](https://i.imgur.com/ahjGYix.jpg) | ![](https://i.imgur.com/0VhpHzo.jpg) |
 
